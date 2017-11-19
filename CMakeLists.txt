@@ -30,18 +30,3 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 target_include_directories(${PROJECT_NAME} PRIVATE
 	"${CMAKE_CURRENT_BINARY_DIR}/include")
 
-if ("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang")
-	target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra #-Wpedantic
-		-Werror)# -fno-exceptions)# -fno-rtti)
-
-elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
-	target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra #-Wpedantic
-		-Werror)# -fno-exceptions)# -fno-rtti)
-
-elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Intel")
-  # using Intel C++
-
-elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
-	target_compile_options(${PROJECT_NAME} PRIVATE /W4 /WX)
-
-endif()
