@@ -2,7 +2,6 @@ cmake_minimum_required(VERSION 3.8.0)
 project(build_options CXX)
 
 # Simple options.
-set(MY_STRING "a string")
 set(MY_INT 42)
 option(MY_BOOL "A boolean." On) # Use cmake .. -DMY_BOOL=Off to turn off.
 

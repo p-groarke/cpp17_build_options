@@ -16,10 +16,6 @@ int main(int, char**) {
 		if constexpr (build_options.my_int == 42) {
 			std::cout << "  Do something with int." << std::endl;
 		}
-		if constexpr (build_options.my_string == "a string") {
-			std::cout << "  Do something with string : "
-					  << build_options.my_string << std::endl;
-		}
 	}
 
 	if constexpr (build_options.cpp_version != CppVersion::cpp17) {
