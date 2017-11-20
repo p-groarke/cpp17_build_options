@@ -34,7 +34,6 @@ target_include_directories(${PROJECT_NAME} PRIVATE
 	"${CMAKE_CURRENT_BINARY_DIR}/include")
 
 if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
-	message("WINDOWS")
 	# CMAKE_CXX_STANDARD for MSVC should be fixed in CMake 3.10.
 	target_compile_options(${PROJECT_NAME} PRIVATE /std:c++latest)
 endif()
