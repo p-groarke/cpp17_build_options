@@ -8,7 +8,7 @@ using namespace std::string_view_literals;
 #cmakedefine01 MY_BOOL
 
 #cmakedefine CPP_VERSION @CPP_VERSION@
-enum class CppVersion : int { cpp98 = 98, cpp11 = 11, cpp14 = 14, cpp17 = 17 };
+enum class CppVersion { cpp98 = 98, cpp11 = 11, cpp14 = 14, cpp17 = 17 };
 
 struct BuildOptions {
 	constexpr static std::string_view my_string = MY_STRING;
