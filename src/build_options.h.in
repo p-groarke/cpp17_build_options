@@ -1,9 +1,6 @@
 #pragma once
 
-#include <string_view>
-using namespace std::string_view_literals;
-
-#cmakedefine MY_STRING "@MY_STRING@"sv
+#cmakedefine MY_STRING "@MY_STRING@"
 #cmakedefine MY_INT @MY_INT@
 #cmakedefine01 MY_BOOL
 
@@ -11,7 +8,7 @@ using namespace std::string_view_literals;
 enum class CppVersion { cpp98 = 98, cpp11 = 11, cpp14 = 14, cpp17 = 17 };
 
 struct BuildOptions {
-	constexpr static std::string_view my_string = MY_STRING;
+	constexpr static const char* my_string = MY_STRING;
 	constexpr static int my_int = MY_INT;
 	constexpr static bool my_bool = static_cast<bool>(MY_BOOL);
 	constexpr static CppVersion cpp_version = static_cast<CppVersion>(CPP_VERSION);
